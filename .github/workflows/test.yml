@@ -1,0 +1,14 @@
+name: Test using github action mirror
+on:
+  workflow_dispatch:
+
+jobs:
+  test_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Use action
+        uses: mkirkeng-leukeleu/setup-uv@v6
+        with:
+          python-version: '3.13'
+          activate-environment: true
+          enable-cache: false
